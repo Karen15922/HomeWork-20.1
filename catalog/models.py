@@ -26,6 +26,7 @@ class Product(models.Model):
     product_purchase_price = models.DecimalField(max_digits=6, decimal_places=2, **NULLABLE)
     created_at = models.DateField(default=datetime.now)
     update_at = models.DateField(default=datetime.now)
+    manufactured_at = models.DateField(null=True, blank=True)
 
     def __str__(self):
         return f'{self.product_name} стоит {self.price} находится в {self.category}'
