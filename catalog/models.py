@@ -29,7 +29,7 @@ class Product(models.Model):
     
 
     def __str__(self):
-        return f'{self.product_name} стоит {self.price} находится в {self.category}'
+        return f'{self.product_name} стоит {self.product_purchase_price} находится в {self.product_category}'
 
     class Meta:
         verbose_name = 'продукт'
